@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student & Faculty Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left-panel {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><rect width="1000" height="1000" fill="url(%23a)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .education-image {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .education-content {
+            text-align: center;
+            color: white;
+        }
+
+        .education-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .education-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .education-text p {
+            font-size: 1.2em;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .right-panel {
+            flex: 0 0 450px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .login-title {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .login-subtitle {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 30px;
+        }
+
+        .user-type-selector {
+            display: flex;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .user-type-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+
+        .user-type-btn.active {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .forgot-password a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e1e5e9;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 20px;
+        }
+
+        .help-text {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .help-text a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .help-text a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .left-panel {
+                flex: 0 0 200px;
+            }
+            
+            .education-image {
+                width: 250px;
+                height: 200px;
+            }
+            
+            .education-icon {
+                font-size: 60px;
+            }
+            
+            .education-text h2 {
+                font-size: 1.8em;
+            }
+            
+            .education-text p {
+                font-size: 1em;
+            }
+            
+            .right-panel {
+                flex: 1;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="education-image">
+                <div class="education-content">
+                    <div class="education-icon">🎓</div>
+                    <div class="education-text">
+                        <h2>Welcome Back</h2>
+                        <p>Access your educational portal<br>and continue your learning journey</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="login-container">
+                <div class="logo-section">
+                    <div class="logo"></div>
+                    <h1 class="login-title">Sign In</h1>
+                    <p class="login-subtitle">Enter your credentials to access your account</p>
+                </div>
+                
+                <div class="user-type-selector">
+                    <button class="user-type-btn active" id="studentBtn" onclick="selectUserType('student')">Student</button>
+                    <button class="user-type-btn" id="facultyBtn" onclick="selectUserType('faculty')">Faculty</button>
+                </div>
+                
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="username">Username or Email</label>
+                        <input type="text" id="username" class="form-input" placeholder="Enter your username or email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="password">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="forgot-password">
+                        <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">
+                        Sign In
+                    </button>
+                </form>
+                
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                
+                <div class="help-text">
+                    Need help? <a href="#" onclick="getHelp()">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentUserType = 'student';
+
+        function selectUserType(type) {
+            currentUserType = type;
+            
+            // Update button states
+            document.getElementById('studentBtn').classList.remove('active');
+            document.getElementById('facultyBtn').classList.remove('active');
+            document.getElementById(type + 'Btn').classList.add('active');
+            
+            // Update form placeholder based on user type
+            const usernameInput = document.getElementById('username');
+            if (type === 'student') {
+                usernameInput.placeholder = 'Enter your student ID or email';
+            } else {
+                usernameInput.placeholder = 'Enter your faculty ID or email';
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            
+            // Basic validation
+            if (!user || !pass) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Show loading state
+            const loginBtn = document.querySelector('.login-btn');
+            loginBtn.innerHTML = 'Signing In...';
+            loginBtn.disabled = true;
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                // Your dummy credentials
+                let validUser, validPass;
+                
+                if (currentUserType === 'student') {
+                    validUser = "student123";
+                    validPass = "skillsphere";
+                     if (user === validUser && pass === validPass) {
+                    alert(`Login successful! Redirecting to ${currentUserType} dashboard...`);
+                    window.location.href = "student.html"; // redirect after success
+                } else {
+                    alert("Invalid username or password ❌");
+                }
+                } else if (currentUserType === 'faculty') {
+                    validUser = "faculty123";
+                    validPass = "skillsphere";
+                     if (user === validUser && pass === validPass) {
+                    alert(`Login successful! Redirecting to ${currentUserType} dashboard...`);
+                    window.location.href = "faculty.html"; // redirect after success
+                } else {
+                    alert("Invalid username or password ❌");
+                }
+                }
+                
+               
+                
+                // Reset button
+                loginBtn.innerHTML = 'Sign In';
+                loginBtn.disabled = false;
+            }, 1500);
+        }
+
+        function forgotPassword() {
+            alert(`Password reset link will be sent for ${currentUserType} account`);
+        }
+
+        function getHelp() {
+            alert('Contact support: support@edu.com or call 1-800-EDU-HELP');
+        }
+
+        // Add some interactive effects
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.classList.remove('focused');
+            });
+        });
+    </script>
+</body>
+</html>

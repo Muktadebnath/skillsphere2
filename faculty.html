@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSphere - Faculty Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="faculty.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>🎯 SkillSphere</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-panel="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-panel="students">
+                    <span class="nav-icon">👨‍🎓</span>
+                    <span>Students</span>
+                </a>
+                <a href="#" class="nav-item" data-panel="courses">
+                    <span class="nav-icon">📚</span>
+                    <span>Courses</span>
+                </a>
+                <a href="#" class="nav-item" data-panel="workshops">
+                    <span class="nav-icon">🏫</span>
+                    <span>Workshops</span>
+                </a>
+                <a href="#" class="nav-item" data-panel="internships">
+                    <span class="nav-icon">💼</span>
+                    <span>Internships</span>
+                </a>
+                <a href="#" class="nav-item" data-panel="analytics">
+                    <span class="nav-icon">📈</span>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" data-panel="messages">
+                    <span class="nav-icon">💬</span>
+                    <span>Messages</span>
+                </a>
+                <a href="#" class="nav-item" data-panel="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="welcome-msg">
+                    <h3>Welcome back, Dr. Priya Meheta! 👋</h3>
+                </div>
+                <div class="top-bar-right">
+                    <div class="notification-bell">🔔</div>
+                    <div class="profile-avatar">MD</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Panel -->
+            <div class="content-panel active" id="dashboard">
+                <h2 class="panel-title">Dashboard Overview</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card pulse">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Total Students</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Active Courses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Workshops</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">Internships</div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 25px;">📈 Class Progress Tracking</h3>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Web Development</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>UI/UX Design</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Data Analytics</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 25px;">🏆 Top Performers</h3>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #667eea, #764ba2); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">AS</div>
+                                <div>
+                                    <div style="font-weight: 600;">Arjun Sharma</div>
+                                    <div style="color: #666;">2,450 points</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #28a745, #20c997); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">PK</div>
+                                <div>
+                                    <div style="font-weight: 600;">Priya Kumari</div>
+                                    <div style="color: #666;">2,380 points</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #fd7e14, #ffc107); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">RG</div>
+                                <div>
+                                    <div style="font-weight: 600;">Rahul Gupta</div>
+                                    <div style="color: #666;">2,290 points</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: #667eea; margin-bottom: 25px;">📋 Workshop & Internship Verification</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Type</th>
+                                    <th>Title</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ankit Verma</td>
+                                    <td>Workshop</td>
+                                    <td>React Development Bootcamp</td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-success" onclick="updateStatus(this, 'approved')">Approve</button>
+                                        <button class="btn btn-danger" onclick="updateStatus(this, 'rejected')">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sneha Patel</td>
+                                    <td>Internship</td>
+                                    <td>Frontend Developer at TechCorp</td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-success" onclick="updateStatus(this, 'approved')">Approve</button>
+                                        <button class="btn btn-danger" onclick="updateStatus(this, 'rejected')">Reject</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 25px;">📊 Participation Trends</h3>
+                        <div class="chart-container">
+                            <canvas id="participationChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 15px;">🎯 Top Skill Categories</h3>
+                        <div class="chart-container">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Students Panel -->
+            <div class="content-panel" id="students">
+                <h2 class="panel-title">Student Directory</h2>
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">Manage and monitor your students</p>
+                
+                <div class="student-panel">
+                    <div class="panel-header">
+                        <div class="header-actions">
+                            <div class="search-filter-container">
+                                <div class="search-wrapper">
+                                    <input type="text" 
+                                           id="studentSearchInput" 
+                                           class="search-input" 
+                                           placeholder="🔍 Search students by name or email..."
+                                           onkeyup="filterStudents()">
+                                </div>
+                                <div class="filter-wrapper">
+                                    <select id="skillFilterSelect" 
+                                            class="filter-select" 
+                                            onchange="filterStudentsBySkill()">
+                                        <option value="">All Skills</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="UI/UX">UI/UX Design</option>
+                                        <option value="Data Analytics">Data Analytics</option>
+                                        <option value="Machine Learning">Machine Learning</option>
+                                        <option value="Python">Python</option>
+                                        <option value="JavaScript">JavaScript</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="stats-summary">
+                                <div class="stat-item">
+                                    <span class="stat-number">156</span>
+                                    <span class="stat-label">Total Students</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Active Courses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="students-table-container">
+                        <div class="table-responsive">
+                            <table class="students-table" id="studentsTable">
+                                <thead>
+                                    <tr>
+                                        <th class="profile-column">Student</th>
+                                        <th class="email-column">Email</th>
+                                        <th class="skills-column">Enrolled Skills</th>
+                                        <th class="performance-column">Performance</th>
+                                        <th class="actions-column">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentsTableBody">
+                                    <tr class="student-row" data-name="alex morgan" data-email="alex.morgan@example.com" data-skills="Web Development,UI/UX">
+                                        <td class="profile-cell">
+                                            <div class="student-profile">
+                                                <div class="student-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">AM</div>
+                                                <div class="student-info">
+                                                    <div class="student-name">Alex Morgan</div>
+                                                    <div class="student-id">#ST001</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="email-cell">alex.morgan@example.com</td>
+                                        <td class="skills-cell">
+                                            <div class="skill-tags">
+                                                <span class="skill-tag skill-webdev">Web Development</span>
+                                                <span class="skill-tag skill-uiux">UI/UX</span>
+                                            </div>
+                                        </td>
+                                        <td class="performance-cell">
+                                            <div class="performance-container">
+                                                <div class="progress-bar-wrapper">
+                                                    <div class="progress-bar-bg">
+                                                        <div class="progress-bar-fill" style="width: 85%;" data-progress="85"></div>
+                                                    </div>
+                                                    <span class="progress-text">85%</span>
+                                                </div>
+                                                <div class="performance-status excellent">Excellent</div>
+                                            </div>
+                                        </td>
+                                        <td class="actions-cell">
+                                            <div class="action-buttons">
+                                                <button class="btn btn-view" onclick="viewStudentProfile('Alex Morgan')" title="View Profile">👁️ View</button>
+                                                <button class="btn btn-message" onclick="sendMessageToStudent('Alex Morgan')" title="Send Message">💬 Message</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="student-row" data-name="jordan davis" data-email="jordan.davis@example.com" data-skills="Data Analytics">
+                                        <td class="profile-cell">
+                                            <div class="student-profile">
+                                                <div class="student-avatar" style="background: linear-gradient(135deg, #28a745, #20c997);">JD</div>
+                                                <div class="student-info">
+                                                    <div class="student-name">Jordan Davis</div>
+                                                    <div class="student-id">#ST002</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="email-cell">jordan.davis@example.com</td>
+                                        <td class="skills-cell">
+                                            <div class="skill-tags">
+                                                <span class="skill-tag skill-data">Data Analytics</span>
+                                            </div>
+                                        </td>
+                                        <td class="performance-cell">
+                                            <div class="performance-container">
+                                                <div class="progress-bar-wrapper">
+                                                    <div class="progress-bar-bg">
+                                                        <div class="progress-bar-fill" style="width: 72%;" data-progress="72"></div>
+                                                    </div>
+                                                    <span class="progress-text">72%</span>
+                                                </div>
+                                                <div class="performance-status good">Good</div>
+                                            </div>
+                                        </td>
+                                        <td class="actions-cell">
+                                            <div class="action-buttons">
+                                                <button class="btn btn-view" onclick="viewStudentProfile('Jordan Davis')" title="View Profile">👁️ View</button>
+                                                <button class="btn btn-message" onclick="sendMessageToStudent('Jordan Davis')" title="Send Message">💬 Message</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="student-row" data-name="sam taylor" data-email="sam.taylor@example.com" data-skills="UI/UX,Data Analytics">
+                                        <td class="profile-cell">
+                                            <div class="student-profile">
+                                                <div class="student-avatar" style="background: linear-gradient(135deg, #fd7e14, #ffc107);">ST</div>
+                                                <div class="student-info">
+                                                    <div class="student-name">Sam Taylor</div>
+                                                    <div class="student-id">#ST003</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="email-cell">sam.taylor@example.com</td>
+                                        <td class="skills-cell">
+                                            <div class="skill-tags">
+                                                <span class="skill-tag skill-uiux">UI/UX</span>
+                                                <span class="skill-tag skill-data">Data Analytics</span>
+                                            </div>
+                                        </td>
+                                        <td class="performance-cell">
+                                            <div class="performance-container">
+                                                <div class="progress-bar-wrapper">
+                                                    <div class="progress-bar-bg">
+                                                        <div class="progress-bar-fill" style="width: 64%;" data-progress="64"></div>
+                                                    </div>
+                                                    <span class="progress-text">64%</span>
+                                                </div>
+                                                <div class="performance-status average">Average</div>
+                                            </div>
+                                        </td>
+                                        <td class="actions-cell">
+                                            <div class="action-buttons">
+                                                <button class="btn btn-view" onclick="viewStudentProfile('Sam Taylor')" title="View Profile">👁️ View</button>
+                                                <button class="btn btn-message" onclick="sendMessageToStudent('Sam Taylor')" title="Send Message">💬 Message</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="student-row" data-name="priya sharma" data-email="priya.sharma@example.com" data-skills="Machine Learning,Python">
+                                        <td class="profile-cell">
+                                            <div class="student-profile">
+                                                <div class="student-avatar" style="background: linear-gradient(135deg, #e83e8c, #fd7e14);">PS</div>
+                                                <div class="student-info">
+                                                    <div class="student-name">Priya Sharma</div>
+                                                    <div class="student-id">#ST004</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="email-cell">priya.sharma@example.com</td>
+                                        <td class="skills-cell">
+                                            <div class="skill-tags">
+                                                <span class="skill-tag skill-ml">Machine Learning</span>
+                                                <span class="skill-tag skill-python">Python</span>
+                                            </div>
+                                        </td>
+                                        <td class="performance-cell">
+                                            <div class="performance-container">
+                                                <div class="progress-bar-wrapper">
+                                                    <div class="progress-bar-bg">
+                                                        <div class="progress-bar-fill" style="width: 91%;" data-progress="91"></div>
+                                                    </div>
+                                                    <span class="progress-text">91%</span>
+                                                </div>
+                                                <div class="performance-status excellent">Excellent</div>
+                                            </div>
+                                        </td>
+                                        <td class="actions-cell">
+                                            <div class="action-buttons">
+                                                <button class="btn btn-view" onclick="viewStudentProfile('Priya Sharma')" title="View Profile">👁️ View</button>
+                                                <button class="btn btn-message" onclick="sendMessageToStudent('Priya Sharma')" title="Send Message">💬 Message</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="student-row" data-name="ryan mitchell" data-email="ryan.mitchell@example.com" data-skills="JavaScript,Web Development">
+                                        <td class="profile-cell">
+                                            <div class="student-profile">
+                                                <div class="student-avatar" style="background: linear-gradient(135deg, #6f42c1, #e83e8c);">RM</div>
+                                                <div class="student-info">
+                                                    <div class="student-name">Ryan Mitchell</div>
+                                                    <div class="student-id">#ST005</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="email-cell">ryan.mitchell@example.com</td>
+                                        <td class="skills-cell">
+                                            <div class="skill-tags">
+                                                <span class="skill-tag skill-js">JavaScript</span>
+                                                <span class="skill-tag skill-webdev">Web Development</span>
+                                            </div>
+                                        </td>
+                                        <td class="performance-cell">
+                                            <div class="performance-container">
+                                                <div class="progress-bar-wrapper">
+                                                    <div class="progress-bar-bg">
+                                                        <div class="progress-bar-fill" style="width: 78%;" data-progress="78"></div>
+                                                    </div>
+                                                    <span class="progress-text">78%</span>
+                                                </div>
+                                                <div class="performance-status good">Good</div>
+                                            </div>
+                                        </td>
+                                        <td class="actions-cell">
+                                            <div class="action-buttons">
+                                                <button class="btn btn-view" onclick="viewStudentProfile('Ryan Mitchell')" title="View Profile">👁️ View</button>
+                                                <button class="btn btn-message" onclick="sendMessageToStudent('Ryan Mitchell')" title="Send Message">💬 Message</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="no-results" id="noResultsMessage" style="display: none;">
+                        <div class="no-results-content">
+                            <div class="no-results-icon">🔍</div>
+                            <h3>No students found</h3>
+                            <p>Try adjusting your search criteria or filters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses Panel -->
+            <div class="content-panel" id="courses">
+                <h2 class="panel-title">Course Management</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h4 style="color: #667eea; margin-bottom: 15px;">Web Development</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Full-stack web development course</p>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px;"><strong>42 Students Enrolled</strong></p>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: #667eea; margin-bottom: 15px;">UI/UX Design</h4>
+                        <p style="color: #666; margin-bottom: 15px;">User interface and experience design</p>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px;"><strong>38 Students Enrolled</strong></p>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: #667eea; margin-bottom: 15px;">Data Analytics</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Data analysis and visualization</p>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px;"><strong>35 Students Enrolled</strong></p>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: #667eea; margin-bottom: 15px;">Aptitude Test</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Enhance your aptitude quality</p>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Progress</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshops Panel -->
+            <div class="content-panel" id="workshops">
+                <h2 class="panel-title">Workshops Details</h2>
+                <div class="card">
+                    <h3 style="color: #667eea; margin-bottom: 10px;">📝 Workshop Overview</h3>
+                    <p><strong>Title:</strong> AI & ML Bootcamp – Session 3</p>
+                    <p><strong>Date:</strong> 30th Sep 2025 | <strong>Time:</strong> 2:00 PM - 4:00 PM</p>
+                    <div style="margin-bottom: 10px;">
+                        <span style="margin-right: 15px;"><strong>Total Students:</strong> 50</span>
+                        <span style="margin-right: 15px;"><strong>Attended:</strong> 38</span>
+                        <span><strong>Absent:</strong> 12</span>
+                    </div>
+                    <div class="chart-container" style="height: 180px; margin-bottom: 10px;">
+                        <canvas id="workshopParticipationChart"></canvas>
+                    </div>
+                    <p style="font-size: 14px; color: #555;">Attendance has improved by 15% since last session.</p>
+                    <div style="margin-top: 10px;">
+                        <button class="btn btn-primary" style="margin-right: 10px;">Mark Attendance</button>
+                        <button class="btn btn-primary" style="margin-right: 10px;">Send Reminder</button>
+                        <button class="btn btn-primary" style="margin-right: 10px;">Upload Materials</button>
+                        <button class="btn btn-primary">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Messages Panel -->
+<div class="content-panel" id="messages">
+    <h2 class="panel-title">Messages</h2>
+    <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">Communicate with students and faculty</p>
+    
+    <div class="grid-2">
+        <!-- Message List -->
+        <div class="card">
+            <h3 style="color: #667eea; margin-bottom: 20px;">💬 Recent Messages</h3>
+            <div id="messageList" style="max-height: 500px; overflow-y: auto;">
+                <div class="message-item" onclick="selectMessage(0)">
+                    <div class="message-header">
+                        <div class="message-sender">Alex Morgan</div>
+                        <div class="message-time">2 hours ago</div>
+                    </div>
+                    <div class="message-preview">Question about assignment deadline for Web Development project...</div>
+                </div>
+                <div class="message-item" onclick="selectMessage(1)">
+                    <div class="message-header">
+                        <div class="message-sender">Priya Sharma</div>
+                        <div class="message-time">5 hours ago</div>
+                    </div>
+                    <div class="message-preview">Thank you for the feedback on my Machine Learning presentation...</div>
+                </div>
+                <div class="message-item" onclick="selectMessage(2)">
+                    <div class="message-header">
+                        <div class="message-sender">Jordan Davis</div>
+                        <div class="message-time">1 day ago</div>
+                    </div>
+                    <div class="message-preview">Can I schedule a meeting to discuss my internship application?</div>
+                </div>
+                <div class="message-item" onclick="selectMessage(3)">
+                    <div class="message-header">
+                        <div class="message-sender">Ryan Mitchell</div>
+                        <div class="message-time">2 days ago</div>
+                    </div>
+                    <div class="message-preview">Request for recommendation letter for job application...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Detail / Compose -->
+        <div class="card">
+            <h3 style="color: #667eea; margin-bottom: 20px;">✉️ Message Details</h3>
+            <div id="messageDetail">
+                <div class="form-group">
+                    <label class="form-label">To:</label>
+                    <input type="text" id="messageTo" class="form-input" placeholder="Student name or email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Subject:</label>
+                    <input type="text" id="messageSubject" class="form-input" placeholder="Message subject">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message:</label>
+                    <textarea id="messageBody" class="form-input" style="min-height: 200px; resize: vertical;" placeholder="Type your message here..."></textarea>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-primary" onclick="sendMessage()">Send Message</button>
+                    <button class="btn" style="background: #6c757d; color: white;" onclick="clearMessageForm()">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="card" style="margin-top: 20px;">
+        <h3 style="color: #667eea; margin-bottom: 15px;">📊 Message Statistics</h3>
+        <div style="display: flex; gap: 30px;">
+            <div>
+                <div style="font-size: 24px; font-weight: 600; color: #667eea;">24</div>
+                <div style="color: #666;">Unread Messages</div>
+            </div>
+            <div>
+                <div style="font-size: 24px; font-weight: 600; color: #28a745;">156</div>
+                <div style="color: #666;">Total Conversations</div>
+            </div>
+            <div>
+                <div style="font-size: 24px; font-weight: 600; color: #fd7e14;">8</div>
+                <div style="color: #666;">Pending Replies</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Internships Panel -->
+            <div class="content-panel" id="internships">
+                <h2 class="panel-title">Internship Verification</h2>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <span style="background:#e6f4ea; color:#2e7d32; padding:8px 16px; border-radius:8px; font-weight:600;">
+                        ✅ Approved: <span id="approvedCount">0</span>
+                    </span>
+                    <span style="background:#fff8e1; color:#b28704; padding:8px 16px; border-radius:8px; font-weight:600;">
+                        ⏳ Pending: <span id="pendingCount">0</span>
+                    </span>
+                    <span style="background:#ffebee; color:#c62828; padding:8px 16px; border-radius:8px; font-weight:600;">
+                        ❌ Rejected: <span id="rejectedCount">0</span>
+                    </span>
+                </div>
+
+                <div class="card">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left; padding: 15px;">Student</th>
+                                <th style="text-align: left; padding: 15px;">Company</th>
+                                <th style="text-align: left; padding: 15px;">Status</th>
+                                <th style="text-align: left; padding: 15px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="internshipTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <button class="btn btn-primary" onclick="approveAllPending()" style="margin-right: 10px;">Approve All Pending</button>
+                    <button class="btn btn-primary" onclick="alert('Download feature not implemented')" style="margin-right: 10px;">Download Report</button>
+                    <button class="btn btn-primary" onclick="alert('Reminder feature not implemented')">Send Reminder</button>
+                </div>
+            </div>
+
+            <!-- Analytics Panel -->
+            <div class="content-panel" id="analytics">
+                <h2 class="panel-title">Analytics & Insights</h2>
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">Comprehensive performance analytics</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">87%</div>
+                        <div class="stat-label">Avg. Completion Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">342</div>
+                        <div class="stat-label">Total Enrollments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4.6/5</div>
+                        <div class="stat-label">Avg. Rating</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">128</div>
+                        <div class="stat-label">Certificates Issued</div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 20px;">📊 Student Performance Trends</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="performanceTrendChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 20px;">📚 Course Enrollment Distribution</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="enrollmentDistChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 20px;">📅 Monthly Activity</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="monthlyActivityChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: #667eea; margin-bottom: 20px;">🎯 Skill Completion Rates</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="skillCompletionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: #667eea; margin-bottom: 20px;">📋 Course Performance Details</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course Name</th>
+                                    <th>Enrolled</th>
+                                    <th>Completed</th>
+                                    <th>Completion Rate</th>
+                                    <th>Avg. Score</th>
+                                    <th>Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Web Development</td>
+                                    <td>42</td>
+                                    <td>38</td>
+                                    <td><span class="status-badge status-approved">90%</span></td>
+                                    <td>85%</td>
+                                    <td style="color: #28a745; font-weight: 600;">↑ 5%</td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>38</td>
+                                    <td>35</td>
+                                    <td><span class="status-badge status-approved">92%</span></td>
+                                    <td>88%</td>
+                                    <td style="color: #28a745; font-weight: 600;">↑ 3%</td>
+                                </tr>
+                                <tr>
+                                    <td>Data Analytics</td>
+                                    <td>35</td>
+                                    <td>27</td>
+                                    <td><span class="status-badge status-pending">77%</span></td>
+                                    <td>78%</td>
+                                    <td style="color: #dc3545; font-weight: 600;">↓ 2%</td>
+                                </tr>
+                                <tr>
+                                    <td>Machine Learning</td>
+                                    <td>28</td>
+                                    <td>22</td>
+                                    <td><span class="status-badge status-pending">79%</span></td>
+                                    <td>82%</td>
+                                    <td style="color: #28a745; font-weight: 600;">↑ 7%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    // ================== Global Variables ==================
+    let internships = [
+        { name: "Alice Sharma", company: "TCS", status: "Approved" },
+        { name: "Rahul Mehta", company: "Infosys", status: "Pending" },
+        { name: "Sneha Roy", company: "Wipro", status: "Rejected" },
+        { name: "Vikram Das", company: "Accenture", status: "Pending" }
+    ];
+
+    // ================== Panel Navigation ==================
+    function hideAllPanels() {
+        document.querySelectorAll(".content-panel").forEach(panel => {
+            panel.style.display = "none";
+        });
+    }
+
+    function showPanel(panelId) {
+        hideAllPanels();
+        const panel = document.getElementById(panelId);
+        if (panel) panel.style.display = "block";
+    }
+
+    // ================== Sidebar Click Handling ==================
+    document.querySelectorAll(".nav-item").forEach(item => {
+        item.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.querySelectorAll(".nav-item").forEach(nav => nav.classList.remove("active"));
+            this.classList.add("active");
+            const panelId = this.getAttribute("data-panel");
+            if (panelId) showPanel(panelId);
+        });
+    });
+
+    // ================== Internship Functions ==================
+    function renderInternshipTable() {
+        const tbody = document.getElementById("internshipTableBody");
+        if (!tbody) return;
+
+        tbody.innerHTML = "";
+
+        internships.forEach((student, index) => {
+            const row = document.createElement("tr");
+            let statusColor = "";
+            if(student.status === "Approved") statusColor = "#2e7d32";
+            else if(student.status === "Pending") statusColor = "#b28704";
+            else statusColor = "#c62828";
+
+            row.innerHTML = `
+                <td style="padding: 15px;">${student.name}</td>
+                <td style="padding: 15px;">${student.company}</td>
+                <td style="padding: 15px; color:${statusColor}; font-weight:600;">${student.status}</td>
+                <td style="padding: 15px;">
+                    ${student.status === "Pending" ? 
+                    `<button class="btn btn-success" style="margin-right:8px;" onclick="approveInternship(${index})">✅ Approve</button>
+                     <button class="btn btn-danger" onclick="rejectInternship(${index})">❌ Reject</button>` 
+                     : `<button class="btn btn-primary" onclick="viewInternship(${index})">👁️ View</button>`}
+                </td>
+            `;
+            tbody.appendChild(row);
+        });
+
+        updateSummary();
+    }
+
+    function updateSummary() {
+        document.getElementById("approvedCount").innerText = internships.filter(i => i.status === "Approved").length;
+        document.getElementById("pendingCount").innerText = internships.filter(i => i.status === "Pending").length;
+        document.getElementById("rejectedCount").innerText = internships.filter(i => i.status === "Rejected").length;
+    }
+
+    function approveInternship(i) { 
+        internships[i].status = "Approved"; 
+        renderInternshipTable(); 
+    }
+
+    function rejectInternship(i) { 
+        internships[i].status = "Rejected"; 
+        renderInternshipTable(); 
+    }
+
+    function viewInternship(i) { 
+        alert(`Student: ${internships[i].name}\nCompany: ${internships[i].company}\nStatus: ${internships[i].status}`); 
+    }
+
+    function approveAllPending() { 
+        internships.forEach(i => { 
+            if(i.status === "Pending") i.status="Approved"; 
+        }); 
+        renderInternshipTable(); 
+    }
+
+    // ================== Student Panel Functions ==================
+    function filterStudents() {
+        const searchInput = document.getElementById("studentSearchInput").value.toLowerCase();
+        const skillFilter = document.getElementById("skillFilterSelect").value;
+        const rows = document.querySelectorAll(".student-row");
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+            const name = row.getAttribute("data-name");
+            const email = row.getAttribute("data-email");
+            const skills = row.getAttribute("data-skills");
+
+            const matchesSearch = name.includes(searchInput) || email.includes(searchInput);
+            const matchesSkill = !skillFilter || skills.includes(skillFilter);
+
+            if (matchesSearch && matchesSkill) {
+                row.style.display = "";
+                visibleCount++;
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+        document.getElementById("noResultsMessage").style.display = visibleCount === 0 ? "block" : "none";
+    }
+
+    function filterStudentsBySkill() {
+        filterStudents();
+    }
+
+    function viewStudentProfile(name) {
+        alert(`Viewing profile for ${name}`);
+    }
+
+    function sendMessageToStudent(name) {
+        alert(`Opening message dialog for ${name}`);
+    }
+
+    // ================== Dashboard Functions ==================
+    function updateStatus(button, status) {
+        const row = button.closest("tr");
+        const statusCell = row.querySelector(".status-badge");
+        
+        if (status === "approved") {
+            statusCell.className = "status-badge status-approved";
+            statusCell.textContent = "Approved";
+            row.style.backgroundColor = "#d4edda";
+        } else {
+            statusCell.className = "status-badge status-rejected";
+            statusCell.textContent = "Rejected";
+            row.style.backgroundColor = "#f8d7da";
+        }
+        
+        button.parentElement.innerHTML = '<span style="color: #666;">Processed</span>';
+    }
+    // ================== Message Functions ==================
+const messages = [
+    {
+        from: "Alex Morgan",
+        subject: "Assignment Deadline Question",
+        body: "Hello Dr. Dey,\n\nI was wondering if I could get an extension on the Web Development project deadline? I've been working on it but need a few more days to complete the testing phase.\n\nThank you,\nAlex",
+        time: "2 hours ago"
+    },
+    {
+        from: "Priya Sharma",
+        subject: "Machine Learning Presentation Feedback",
+        body: "Dear Dr. Dey,\n\nThank you so much for the detailed feedback on my Machine Learning presentation. Your suggestions were very helpful and I've incorporated them into my final report.\n\nBest regards,\nPriya",
+        time: "5 hours ago"
+    },
+    {
+        from: "Jordan Davis",
+        subject: "Internship Application Meeting",
+        body: "Hi Dr. Dey,\n\nI would like to schedule a meeting with you to discuss my internship application and get your advice on the companies I should apply to.\n\nWhen would be a good time for you?\n\nThanks,\nJordan",
+        time: "1 day ago"
+    },
+    {
+        from: "Ryan Mitchell",
+        subject: "Recommendation Letter Request",
+        body: "Dear Dr. Dey,\n\nI am applying for a software developer position at a tech company and would be honored if you could write me a recommendation letter.\n\nI can provide all the necessary details if you're able to help.\n\nBest regards,\nRyan",
+        time: "2 days ago"
+    }
+];
+
+function selectMessage(index) {
+    const msg = messages[index];
+    document.getElementById("messageTo").value = msg.from;
+    document.getElementById("messageSubject").value = "Re: " + msg.subject;
+    document.getElementById("messageBody").value = "";
+    document.getElementById("messageBody").placeholder = "Reply to: " + msg.body.substring(0, 100) + "...";
+}
+
+function sendMessage() {
+    const to = document.getElementById("messageTo").value;
+    const subject = document.getElementById("messageSubject").value;
+    const body = document.getElementById("messageBody").value;
+    
+    if (!to || !subject || !body) {
+        alert("Please fill in all fields before sending.");
+        return;
+    }
+    
+    alert(`Message sent to ${to}!\n\nSubject: ${subject}`);
+    clearMessageForm();
+}
+
+function clearMessageForm() {
+    document.getElementById("messageTo").value = "";
+    document.getElementById("messageSubject").value = "";
+    document.getElementById("messageBody").value = "";
+    document.getElementById("messageBody").placeholder = "Type your message here...";
+}
+    // ================== Chart Rendering ==================
+    function renderParticipationTrends() {
+        const ctx = document.getElementById("participationChart");
+        if (!ctx) return;
+        
+        new Chart(ctx.getContext("2d"), {
+            type: "line",
+            data: {
+                labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                datasets: [{
+                    label: "Active Students",
+                    data: [45, 52, 38, 60, 70, 66, 80],
+                    fill: true,
+                    borderColor: "#667eea",
+                    backgroundColor: "rgba(102, 126, 234, 0.2)",
+                    tension: 0.4,
+                    pointBackgroundColor: "#667eea"
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: "Students" } },
+                    x: { title: { display: true, text: "Day" } }
+                }
+            }
+        });
+    }
+
+    function renderTopSkillCategories() {
+        const ctx = document.getElementById("skillsChart");
+        if (!ctx) return;
+        
+        new Chart(ctx.getContext("2d"), {
+            type: "doughnut",
+            data: {
+                labels: ["Web Development", "UI/UX", "Data Analytics", "Machine Learning"],
+                datasets: [{
+                    data: [30, 25, 20, 15],
+                    backgroundColor: ["#667eea", "#23b5d3", "#f39c12", "#9c27b0"],
+                    borderWidth: 2,
+                    hoverOffset: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: "55%",
+                plugins: {
+                    legend: { position: "top", labels: { usePointStyle: true } }
+                }
+            }
+        });
+    }
+
+    function renderWorkshopChart() {
+        const ctx = document.getElementById("workshopParticipationChart");
+        if (!ctx) return;
+        
+        new Chart(ctx.getContext("2d"), {
+            type: "doughnut",
+            data: {
+                labels: ["Attended", "Absent"],
+                datasets: [{
+                    data: [38, 12],
+                    backgroundColor: ["#667eea", "#e0e0e0"],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: "60%",
+                plugins: { legend: { position: "bottom" } }
+            }
+        });
+    }
+
+    function renderPerformanceTrendChart() {
+        const ctx = document.getElementById("performanceTrendChart");
+        if (!ctx) return;
+        
+        new Chart(ctx.getContext("2d"), {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                datasets: [{
+                    label: "Average Score",
+                    data: [75, 78, 82, 85, 88, 87],
+                    borderColor: "#667eea",
+                    backgroundColor: "rgba(102, 126, 234, 0.1)",
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: true, position: 'top' }
+                },
+                scales: {
+                    y: { beginAtZero: true, max: 100, title: { display: true, text: 'Score (%)' } }
+                }
+            }
+        });
+    }
+
+    function renderEnrollmentDistChart() {
+        const ctx = document.getElementById("enrollmentDistChart");
+        if (!ctx) return;
+        
+        new Chart(ctx.getContext("2d"), {
+            type: "pie",
+            data: {
+                labels: ["Web Dev", "UI/UX", "Data Analytics", "ML"],
+                datasets: [{
+                    data: [42, 38, 35, 28],
+                    backgroundColor: ["#667eea", "#23b5d3", "#f39c12", "#9c27b0"],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    }
+
+    function renderMonthlyActivityChart() {
+        const ctx = document.getElementById("monthlyActivityChart");
+        if (!ctx) return;
+        
+        new Chart(ctx.getContext("2d"), {
+            type: "bar",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                datasets: [{
+                    label: "Active Students",
+                    data: [120, 135, 142, 156, 148, 156],
+                    backgroundColor: "#667eea",
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Students' } }
+                }
+            }
+        });
+    }
+
+    function renderSkillCompletionChart() {
+        const ctx = document.getElementById("skillCompletionChart");
+        if (!ctx) return;
+        
+        new Chart(ctx.getContext("2d"), {
+            type: "bar",
+            data: {
+                labels: ["Web Dev", "UI/UX", "Data Analytics", "ML", "Python", "JavaScript"],
+                datasets: [{
+                    label: "Completion Rate (%)",
+                    data: [90, 92, 77, 79, 85, 88],
+                    backgroundColor: [
+                        "#667eea",
+                        "#23b5d3",
+                        "#f39c12",
+                        "#9c27b0",
+                        "#28a745",
+                        "#fd7e14"
+                    ],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { beginAtZero: true, max: 100, title: { display: true, text: 'Completion (%)' } }
+                }
+            }
+        });
+    }
+
+    // ================== Page Initialization ==================
+    document.addEventListener("DOMContentLoaded", () => {
+        showPanel("dashboard");
+        renderInternshipTable();
+        renderParticipationTrends();
+        renderTopSkillCategories();
+        renderWorkshopChart();
+        renderPerformanceTrendChart();
+        renderEnrollmentDistChart();
+        renderMonthlyActivityChart();
+        renderSkillCompletionChart();
+    });
+    </script>
+</body>
+</html>

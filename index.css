@@ -1,0 +1,492 @@
+.internship-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.internship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.upload-btn, .view-btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: #ffd700;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.upload-btn:hover, .view-btn:hover {
+    background: #ffb400;
+}
+
+.progress-bar {
+    background:#ddd;
+    border-radius:10px;
+    height:10px;
+    width:100%;
+    margin-top:8px;
+    overflow: hidden;
+}
+.progress-fill {
+    background:#4CAF50;
+    height:10px;
+    width:66%; /* Dynamically set based on progress */
+    border-radius:10px;
+}
+/* Internship Portal Styling */
+.internship-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.panel-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.panel-header h2 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.internship-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.internship-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.internship-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.internship-list li {
+  background: rgba(255,255,255,0.15);
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.btn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.upload-btn {
+  background: #ffd700;
+  color: #000;
+}
+.upload-btn:hover {
+  background: #ffb400;
+}
+
+.view-btn {
+  background: #4CAF50;
+  color: white;
+}
+.view-btn:hover {
+  background: #3d9242;
+}
+
+.progress-bar {
+  background: rgba(255,255,255,0.3);
+  height: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.progress-fill {
+  background: #00ff88;
+  height: 12px;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-text,
+.progress-status {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+.generate-portfolio-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.generate-portfolio-btn button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.generate-portfolio-btn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+/* Enhanced Dashboard Styles */
+.dashboard-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.welcome-section {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.greeting {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.user-type {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Generate Portfolio Button */
+.generate-portfolio-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.generate-portfolio-btn button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.generate-portfolio-btn button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.generate-portfolio-btn button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.generate-portfolio-btn button:hover::before {
+  left: 100%;
+}
+
+.generate-portfolio-btn button:active {
+  transform: translateY(-1px);
+}
+
+/* Portfolio Generator Specific Styles */
+.portfolio-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.template-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.template-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.template-card.selected {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+}
+
+/* CV Preview Styles */
+.cv-preview-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Loading Animation */
+.loading-spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-section {
+    left: 15px;
+    top: 15px;
+  }
+  
+  .generate-portfolio-btn {
+    right: 15px;
+    top: 15px;
+  }
+  
+  .generate-portfolio-btn button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .user-type {
+    font-size: 24px !important;
+  }
+  
+  .greeting {
+    font-size: 14px !important;
+  }
+}
+
+/* Print Styles for PDF */
+@media print {
+  .cv-preview-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Utility Classes */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+.dashboard-container {
+  padding: 20px;
+}
+
+.generate-portfolio-btn {
+  margin-top: 20px;
+}
+
+.generate-portfolio-btn button {
+  background-color: #4e54c8;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.generate-portfolio-btn button:hover {
+  background-color: #3e44b8;
+}
+/* Notification Icon */
+.notification-container {
+  position: absolute; /* Change from relative → absolute */
+  top: 40px;          /* Distance from the top of dashboard */
+  right: 250px;        /* Distance from the right edge */
+  z-index: 1000;      /* Keeps it above other elements */
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-count {
+  background: red;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* Notification Popup */
+.notification-popup {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 280px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  z-index: 10;
+}
+
+.notification-popup h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.notification-popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-popup li {
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.notification-popup li:last-child {
+  border-bottom: none;
+}
+
+.notification-popup button {
+  margin-top: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.notification-popup button:hover {
+  background: #0056b3;
+}
